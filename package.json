@@ -1,0 +1,16 @@
+{
+	"name": "node-koa-server",
+	"version": "0.1.0",
+	"scripts": {
+		"start": "nodemon ./src/main.js"
+	},
+	"dependencies": {
+		"koa": "^2.14.2",
+		"koa-bodyparser": "^4.4.1",
+		"koa-router": "^12.0.0"
+	},
+	"devDependencies": {
+		"dotenv": "^16.3.1",
+		"nodemon": "^3.0.1"
+	}
+}
