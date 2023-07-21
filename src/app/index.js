@@ -1,8 +1,8 @@
 const koa = require("koa");
 //解析请求参数的
 const bodyParser = require('koa-bodyparser')
+const errorHandler = require('./error-handle')//处理错误函数
 const userRouter = require('../router/user.router')
-
 const app = new koa();
 
 app.use(bodyParser())//解析请求参数的
@@ -15,5 +15,8 @@ app.use(userRouter.allowedMethods({
   // notImplemented: () => '不支持当前请求所需要的功能',
   // methodNotAllowed: () => '不支持的请求方式'
 }));
+
+
+app.on('error', errorHandler)
 
 module.exports = app;
