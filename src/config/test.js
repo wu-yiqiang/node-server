@@ -1,6 +1,6 @@
 var test = {
   env: 'test',
-  port: 3393,
+  port: 5555,
   mysql: {
     host: '127.0.0.1',
     port: 3306,

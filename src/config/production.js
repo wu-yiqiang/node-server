@@ -1,6 +1,6 @@
 var pro = {
   env: 'pro',
-  port: 9527,
+  port: 6666,
   mysql: {
     host: '127.0.0.1',
     port: 3306,

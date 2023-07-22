@@ -1,6 +1,6 @@
 var dev = {
   env: 'pro',
-  port: 6666,
+  port: 4444,
   mysql: {
     host: '127.0.0.1',
     port: 3306,
