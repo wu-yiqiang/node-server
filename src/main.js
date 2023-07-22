@@ -1,8 +1,8 @@
 const app = require('./app')
-const config = require('./app/config')
+const config = require('./config')
 
-app.listen(config.APP_PORT, () => {
-  console.log("start...", config.APP_PORT);
+app.listen(config.port, () => {
+  console.log("start...", config.port);
 });
 
 

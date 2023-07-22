@@ -2,7 +2,12 @@
 	"name": "node-koa-server",
 	"version": "0.1.0",
 	"scripts": {
-		"dev": "nodemon ./src/main.js"
+		"dev:win": "set NODE_ENV='development' && nodemon ./src/main.js",
+		"dev:unix": "export NODE_ENV='development' && nodemon ./src/main.js",
+		"test:win": "set NODE_ENV='test' && nodemon ./src/main.js",
+		"test:unix": "export NODE_ENV='test' && nodemon ./src/main.js",
+		"build:win": "set NODE_ENV='production' && nodemon ./src/main.js",
+		"build:unix": "export NODE_ENV='production' && nodemon ./src/main.js"
 	},
 	"dependencies": {
 		"koa": "^2.14.2",
