@@ -1,5 +1,6 @@
 const errorType = require('../constants/error-types')// 获取错误常量
 const service = require("../service/user.service"); //判断是否存在
+const md5password = require("../utils/password-handle")
 const verifyUser = async (ctx, next) => {
   // 获取
   const { name, password } = ctx.request.body;
@@ -22,6 +23,14 @@ const verifyUser = async (ctx, next) => {
 };
 
 
+// 对密码加密
+const handlePassword = async (ctx, next) => {
+  const { password } = ctx.request.body;
+  ctx.request.body.password = md5password(password);
+};
+
+
 module.exports = {
   verifyUser,
+  handlePassword
 };
