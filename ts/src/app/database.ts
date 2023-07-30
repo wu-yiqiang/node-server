@@ -8,7 +8,7 @@ const dbConfig = {
   password: config.mysql.password,
 }
 const pool = mysql.createPool(dbConfig);
-const query = (sql: string) => {
+const exec = (sql: string) => {
   return new Promise<any>((resolve, reject) => {
     pool.getConnection((error, connection) => {
       if (error) {
@@ -27,4 +27,4 @@ const query = (sql: string) => {
   });
 };
 
-export default query;
+export default exec;
