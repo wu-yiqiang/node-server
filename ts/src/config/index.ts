@@ -1,2 +1,2 @@
-const config = require('./'+process.env.NODE_ENV+'.ts');
+const config = require('./development.ts');
 export = config;

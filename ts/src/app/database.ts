@@ -1,5 +1,5 @@
 import mysql from "mysql2";
-import config from '../config/index'
+import config from '@/config/index'
 const dbConfig = {
   host: config.mysql.host,
   port: config.mysql.port,

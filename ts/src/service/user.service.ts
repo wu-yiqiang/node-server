@@ -1,4 +1,4 @@
-import exec from "../app/database"
+import exec from "@/app/database"
 interface User {
   name: string
   password: string

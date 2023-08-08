@@ -1,6 +1,6 @@
 
 import jwt from "jsonwebtoken";
-import PRIVATE_KEY from "../config";
+import PRIVATE_KEY from "@/config";
 
 class AuthController {
   async login(ctx:any, next:any) {

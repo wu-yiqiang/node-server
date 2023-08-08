@@ -1,6 +1,6 @@
 import errorType from "../constants/error-types";
-import service from "../service/user.service";
-import {md5password} from "../utils/password-handle";
+import service from "@/service/user.service";
+import {md5password} from "@/utils/password-handle";
 const verifyLogin = async (ctx:any, next:any) => {
   // 1, get name & password
   const { name, password } = ctx.request.body;

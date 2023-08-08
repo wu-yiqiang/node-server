@@ -2,10 +2,19 @@ import koa from "koa";
 const cors = require('koa2-cors');
 const koaBody = require('koa-body');
 import errorHandler from "./error-handle";
-import {useRouter} from '../router';
+import {useRouter} from '@/router';
+import {koaSwagger} from "koa2-swagger-ui";
+import swaggerJSDoc from "swagger-jsdoc";
 const fs = require('fs');
 const path = require('path');
+
 const app = new koa();
+app.use(koaSwagger({
+  routePrefix: '/swagger',
+  swaggerOptions: {
+    url: '/swagger.json'
+  }
+}))
 // 处理跨域
 app.use(cors({
   //设置允许来自指定域名请求

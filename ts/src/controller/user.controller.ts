@@ -1,5 +1,5 @@
 //const service = require('../service/user.service')
-import service from "../service/user.service";
+import service from "@/service/user.service";
 import * as console from "console";
 class UserController{
   async create(ctx:any,next:any){

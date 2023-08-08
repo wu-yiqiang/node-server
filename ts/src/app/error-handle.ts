@@ -1,5 +1,5 @@
 //const errorType = require('../constants/error-types')// 获取错误常量
-import errorType from  '../constants/error-types'
+import errorType from  '@/constants/error-types'
 const errorHandler = (error:any , ctx: any) => {
   let status, message;
   console.log('error', error);

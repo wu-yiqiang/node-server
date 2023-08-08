@@ -1,6 +1,6 @@
-import {Response} from "../type/response.type";
-import service from "../service/user.service";
-import {md5password} from "../utils/password-handle"
+import {Response} from "@/type/response.type";
+import service from "@/service/user.service";
+import {md5password} from "@/utils/password-handle"
 export const verifyUser = async (ctx:any, next:any) => {
   const { name, password } = ctx.request.body;
   console.log('asd', name, password)
